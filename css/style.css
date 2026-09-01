@@ -65,8 +65,8 @@ body {
 .header-user button {
     padding: .6rem 1rem;
 
-    background-color: none;
-    color: black;
+    background-color: #1F2937;
+    color: white;
 
     border-radius: 8px;
 }
@@ -215,4 +215,36 @@ body {
     border-radius: 12px;
 
     border: 1px solid #e5e7eb;
+}
+
+
+
+/* ==========================
+   EFFETS
+========================== */
+
+.stat-card,
+.chart-card,
+.table-card {
+    padding: 1.5rem;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+
+    transition: .3s;
+}
+
+.stat-card:hover,
+.chart-card:hover,
+.table-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .10);
+}
+
+button {
+    transition: .3s;
+}
+
+button:hover {
+    opacity: .9;
 }
