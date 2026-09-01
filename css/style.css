@@ -150,3 +150,69 @@ body {
 .dashboard-header p {
     color: #6b7280;
 }
+
+
+
+/* ==========================
+   STATISTIQUES
+========================== */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    height: 120px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+}
+
+/* ==========================
+   GRAPHIQUES
+========================== */
+
+.dashboard-charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+}
+
+.chart-card {
+    height: 320px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+}
+
+/* ==========================
+   TABLEAUX
+========================== */
+
+.dashboard-tables {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.table-card {
+    height: 260px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+}
