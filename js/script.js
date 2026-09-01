@@ -4,6 +4,9 @@ const content = document.querySelector("#content");
 
 const summaryButton = document.querySelector("#summary-btn");
 
+const translationButton = document.querySelector("#translation-btn");
+
+
 function displaySummaryModule() {
 
     content.innerHTML = `
@@ -113,7 +116,6 @@ function displayTranslationModule() {
 
 }
 
-
 function simulateTranslation() {
 
     const input =
@@ -138,3 +140,5 @@ function simulateTranslation() {
         `Traduction simulée (${language.value}) : ${input.value}`;
 
 }
+
+translationButton.addEventListener("click", displayTranslationModule);
