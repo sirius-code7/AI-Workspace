@@ -142,3 +142,44 @@ function simulateTranslation() {
 }
 
 translationButton.addEventListener("click", displayTranslationModule);
+
+
+
+function displayChatModule() {
+
+    content.innerHTML = `
+        <section class="chat-module">
+
+            <!-- module de chat -->
+
+            <h2>Chat IA</h2>
+
+            <!-- zone de saisie -->
+
+            <input
+                type="text"
+                id="chat-input"
+                placeholder="Posez votre question..."
+            >
+
+            <!-- bouton envoyer -->
+
+            <button id="chat-send">
+
+                Envoyer
+
+            </button>
+
+            <!-- zone de réponse -->
+
+            <div id="chat-response">
+
+                La réponse apparaîtra ici.
+
+            </div>
+
+        </section>
+    `;
+
+}
+
