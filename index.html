@@ -1,13 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cross-ai.platform</title>
+    <title>AI Workspace</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-logo">
+            <h1>AI Workspace</h1>
+        </div>
+
+        <div class="header-user">
+            <button id="user-menu">
+                Admin User
+            </button>
+        </div>
+
+    </header>
+
+
+        <!-- Workspace Sidebar -->
+        <div class="workspace">
+            <aside class="sidebar">
+
+                <div class="sidebar-header">
+                    <h2>AI Workspace</h2>
+                </div>
+
+                <nav class="sidebar-nav">
+
+                    <ul>
+
+                        <li>
+                            <button id="dashboard-btn">
+                                Tableau de bord
+                            </button>
+                        </li>
+
+                        <li>
+                            <button id="chat-btn">
+                                Chat
+                            </button>
+                        </li>
+
+                        <li>
+                            <button id="summary-btn">
+                                Résumé de texte
+                            </button>
+                        </li>
+
+                        <li>
+                            <button id="classification-btn">
+                                Classification
+                            </button>
+                        </li>
+
+                        <li>
+                            <button id="translation-btn">
+                                Traduction
+                            </button>
+                        </li>
+
+                        <li>
+                            <button id="history-btn">
+                                Historique
+                            </button>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </aside>
+
+
+                <!-- Main -->
+                <main class="main-content">
+                    
+                    <!-- Zone principale -->
+                    <section id="content">
+
+                        <section class="dashboard-header">
+
+                            <h2>Tableau de bord</h2>
+
+                            <p>
+                                Bienvenue sur votre espace de travail intelligent.
+                            </p>
+
+                        </section>
+
+                        <section class="dashboard-stats">
+
+                            <!-- Cartes de statistiques -->
+                            <article class="stat-card"></article>
+
+                            <article class="stat-card"></article>
+
+                            <article class="stat-card"></article>
+
+                            <article class="stat-card"></article>
+
+                            <article class="stat-card"></article>
+
+                        </section>
+
+                        <section class="dashboard-charts">
+
+                            <!-- Graphiques -->
+                             <article class="chart-card"></article>
+
+                            <article class="chart-card"></article>
+
+                        </section>
+
+                        <section class="dashboard-tables">
+
+                            <!-- Tableaux -->
+                            <article class="table-card"></article>
+
+                            <article class="table-card"></article>
+
+                        </section>
+
+                    </section>
+
+                </main>
+        </div>
+
+
+        
     <script src="js/script.js"></script>
 </body>
 </html>
