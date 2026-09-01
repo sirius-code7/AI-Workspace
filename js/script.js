@@ -6,6 +6,8 @@ const summaryButton = document.querySelector("#summary-btn");
 
 const translationButton = document.querySelector("#translation-btn");
 
+const chatButton = document.querySelector("#chat-btn");
+
 
 function displaySummaryModule() {
 
@@ -213,3 +215,4 @@ function simulateChat() {
 
 }
 
+chatButton.addEventListener("click", displayChatModule);
