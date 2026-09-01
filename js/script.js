@@ -162,7 +162,7 @@ function displayChatModule() {
                 placeholder="Posez votre question..."
             >
 
-            <!-- bouton envoyer -->
+            <!-- btn envoyer -->
 
             <button id="chat-send">
 
@@ -180,6 +180,36 @@ function displayChatModule() {
 
         </section>
     `;
+
+    const chatSend =
+    document.querySelector("#chat-send");
+
+    chatSend.addEventListener(
+        "click",
+        simulateChat
+    );
+
+}
+
+function simulateChat() {
+
+    const input =
+        document.querySelector("#chat-input");
+
+    const response =
+        document.querySelector("#chat-response");
+
+    if (input.value.trim() === "") {
+
+        response.textContent =
+            "Veuillez saisir une question.";
+
+        return;
+
+    }
+
+    response.textContent =
+        `Réponse simulée : ${input.value}`;
 
 }
 
