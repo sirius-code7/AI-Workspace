@@ -58,3 +58,48 @@ function displaySummaryModule() {
 }
 
 summaryButton.addEventListener("click", displaySummaryModule);
+
+
+function displayTranslationModule() {
+
+    content.innerHTML = `
+        <section class="translation-module">
+
+            <!-- module de traduction -->
+            <h2>Traduction</h2>
+
+            <!-- zone de saisie -->
+            <textarea
+                id="translation-input"
+                placeholder="Saisissez votre texte..."
+            ></textarea>
+
+            <!-- sélection de la langue -->
+            <select id="translation-language">
+
+                <option value="anglais">Anglais</option>
+
+                <option value="francais">Français</option>
+
+                <option value="espagnol">Espagnol</option>
+
+            </select>
+
+            <!-- btn traduire -->
+            <button id="translate-button">
+
+                Traduire
+
+            </button>
+
+            <!-- zone d'affichage de la traduction simulée -->
+            <div id="translation-result">
+
+                La traduction apparaîtra ici.
+
+            </div>
+
+        </section>
+    `;
+
+}
