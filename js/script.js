@@ -60,6 +60,7 @@ function displaySummaryModule() {
 summaryButton.addEventListener("click", displaySummaryModule);
 
 
+
 function displayTranslationModule() {
 
     content.innerHTML = `
@@ -101,5 +102,39 @@ function displayTranslationModule() {
 
         </section>
     `;
+
+    const translateButton =
+    document.querySelector("#translate-button");
+
+    translateButton.addEventListener(
+        "click",
+        simulateTranslation
+    );
+
+}
+
+
+function simulateTranslation() {
+
+    const input =
+        document.querySelector("#translation-input");
+
+    const language =
+        document.querySelector("#translation-language");
+
+    const result =
+        document.querySelector("#translation-result");
+
+    if (input.value.trim() === "") {
+
+        result.textContent =
+            "Veuillez saisir un texte.";
+
+        return;
+
+    }
+
+    result.textContent =
+        `Traduction simulée (${language.value}) : ${input.value}`;
 
 }
