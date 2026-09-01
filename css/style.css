@@ -125,3 +125,28 @@ body {
 .sidebar-nav button:hover {
     background-color: #374151;
 }
+
+
+/* ==========================
+   MAIN
+========================== */
+
+.main-content {
+    flex: 1;
+
+    padding: 2rem;
+
+    background-color: #f5f7fa;
+}
+
+.dashboard-header {
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+    margin-bottom: .5rem;
+}
+
+.dashboard-header p {
+    color: #6b7280;
+}
