@@ -460,6 +460,22 @@ function displayHistoryModule() {
             }
 
         });
+
+/* ==========================
+    VIDANGE DE L'HISTORIQUE
+========================== */
+        const clearHistory =
+        document.querySelector("#clear-history");
+
+            clearHistory.addEventListener("click", () => {
+
+                history = [];
+
+                localStorage.removeItem("history");
+
+                renderHistory();
+
+            });
 }
 
 historyButton.addEventListener("click",displayHistoryModule);
