@@ -16,6 +16,8 @@ const chatButton = document.querySelector("#chat-btn");
 
 const predictMenuButton = document.querySelector("#predict-btn");
 
+const historyButton = document.querySelector("#history-btn");
+
 
 /* ==========================
     MODULE DE RÉSUMÉ DE TEXTE
@@ -408,3 +410,5 @@ function displayHistoryModule() {
 
     renderHistory();
 }
+
+historyButton.addEventListener("click",displayHistoryModule);
