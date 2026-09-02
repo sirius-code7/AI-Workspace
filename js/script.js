@@ -266,4 +266,44 @@ function displayPredictionModule() {
         </section>
     `;
 
+    const predictButton =
+    document.querySelector("#predict-button");
+
+    predictButton.addEventListener(
+        "click",
+        simulatePrediction
+    );
+}
+
+// Simulation de prédiction
+function simulatePrediction() {
+
+    const age =
+        document.querySelector("#prediction-age");
+
+    const income =
+        document.querySelector("#prediction-income");
+
+    const city =
+        document.querySelector("#prediction-city");
+
+    const result =
+        document.querySelector("#prediction-result");
+
+    if (
+        age.value.trim() === "" ||
+        income.value.trim() === "" ||
+        city.value.trim() === ""
+    ) {
+
+        result.textContent =
+            "Veuillez remplir tous les champs.";
+
+        return;
+
+    }
+
+    result.textContent =
+        `Prédiction fictive : ${age.value} ans, ${income.value} €, ${city.value}`;
+
 }
