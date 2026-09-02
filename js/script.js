@@ -71,6 +71,8 @@ function displaySummaryModule() {
             input.value.substring(0, 120) +
             "...";
 
+        saveHistory("Résumé de texte", input.value);
+
     });
 }
 
@@ -159,6 +161,8 @@ function simulateTranslation() {
     result.textContent =
         `Traduction simulée (${language.value}) : ${input.value}`;
 
+        saveHistory("Traduction", input.value);
+
 }
 
 translationButton.addEventListener("click", displayTranslationModule);
@@ -236,6 +240,8 @@ function simulateChat() {
 
     response.textContent =
         `Réponse simulée : ${input.value}`;
+
+        saveHistory("Chat", input.value);
 
 }
 
@@ -328,6 +334,8 @@ function simulatePrediction() {
     result.textContent =
         `Prédiction (fictive) : ${age.value} ans, ${income.value} €, ${city.value}`;
 
+        saveHistory("Prédiction", `${age.value}, ${income.value}, ${city.value}`);
+
 }
 
 predictMenuButton.addEventListener("click", displayPredictionModule);
@@ -341,3 +349,29 @@ predictMenuButton.addEventListener("click", displayPredictionModule);
 let history = JSON.parse(
     localStorage.getItem("history")
 ) || [];
+
+/* ==========================
+   FUNCTION HISTORIQUE
+========================== */
+
+function saveHistory(type, request) {
+
+    history.push({
+
+        type,
+
+        request,
+
+        date: new Date().toLocaleString()
+
+    });
+
+    localStorage.setItem(
+
+        "history",
+
+        JSON.stringify(history)
+
+    );
+
+}
