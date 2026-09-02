@@ -9,6 +9,8 @@ const translationButton = document.querySelector("#translation-btn");
 const chatButton = document.querySelector("#chat-btn");
 
 
+// Résumé de texte
+
 function displaySummaryModule() {
 
     content.innerHTML = `
@@ -66,6 +68,7 @@ summaryButton.addEventListener("click", displaySummaryModule);
 
 
 
+// Traduction de texte
 function displayTranslationModule() {
 
     content.innerHTML = `
@@ -118,6 +121,7 @@ function displayTranslationModule() {
 
 }
 
+// Simulation de traduction
 function simulateTranslation() {
 
     const input =
@@ -147,6 +151,7 @@ translationButton.addEventListener("click", displayTranslationModule);
 
 
 
+// Chat IA
 function displayChatModule() {
 
     content.innerHTML = `
@@ -193,6 +198,7 @@ function displayChatModule() {
 
 }
 
+// Simulation de chat
 function simulateChat() {
 
     const input =
@@ -216,3 +222,48 @@ function simulateChat() {
 }
 
 chatButton.addEventListener("click", displayChatModule);
+
+
+
+// Prédiction
+function displayPredictionModule() {
+
+    content.innerHTML = `
+        <section class="prediction-module">
+
+            <h2>Prédiction</h2>
+
+            <input
+                type="number"
+                id="prediction-age"
+                placeholder="Âge"
+            >
+
+            <input
+                type="number"
+                id="prediction-income"
+                placeholder="Revenu"
+            >
+
+            <input
+                type="text"
+                id="prediction-city"
+                placeholder="Ville"
+            >
+
+            <button id="predict-button">
+
+                Prédire
+
+            </button>
+
+            <div id="prediction-result">
+
+                La prédiction apparaîtra ici.
+
+            </div>
+
+        </section>
+    `;
+
+}
