@@ -8,6 +8,8 @@ const translationButton = document.querySelector("#translation-btn");
 
 const chatButton = document.querySelector("#chat-btn");
 
+const predictMenuButton = document.querySelector("#predict-btn");
+
 
 // Résumé de texte
 
@@ -304,6 +306,8 @@ function simulatePrediction() {
     }
 
     result.textContent =
-        `Prédiction fictive : ${age.value} ans, ${income.value} €, ${city.value}`;
+        `Prédiction (fictive) : ${age.value} ans, ${income.value} €, ${city.value}`;
 
 }
+
+predictMenuButton.addEventListener("click", displayPredictionModule);
