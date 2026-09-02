@@ -422,8 +422,44 @@ function displayHistoryModule() {
                 renderHistory(event.target.value);
 
             }
+        );
 
-);
+/* ==========================
+    SUPPRESSION D'UNE ENTRÉE DE L'HISTORIQUE
+========================== */
+        document.addEventListener("click", event => {
+
+            if (
+
+                event.target.classList.contains(
+
+                    "delete-history"
+
+                )
+
+            ) {
+
+                history.splice(
+
+                    event.target.dataset.index,
+
+                    1
+
+                );
+
+                localStorage.setItem(
+
+                    "history",
+
+                    JSON.stringify(history)
+
+                );
+
+                renderHistory();
+
+            }
+
+        });
 }
 
 historyButton.addEventListener("click",displayHistoryModule);
