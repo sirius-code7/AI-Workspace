@@ -409,6 +409,71 @@ function displayHistoryModule() {
     `;
 
     renderHistory();
+
+    const historySearch =
+    document.querySelector("#history-search");
+
+        historySearch.addEventListener(
+
+            "input",
+
+            event => {
+
+                renderHistory(event.target.value);
+
+            }
+
+);
 }
 
 historyButton.addEventListener("click",displayHistoryModule);
+
+
+
+/* ==========================
+    AFFICHAGE + RECHERCHE HISTORIQUE
+========================== */
+
+function renderHistory(search = "") {
+
+    const historyList =
+        document.querySelector("#history-list");
+
+    historyList.innerHTML = "";
+
+    const filteredHistory = history.filter(item =>
+
+        item.request
+            .toLowerCase()
+            .includes(search.toLowerCase())
+
+    );
+
+    filteredHistory.forEach((item, index) => {
+
+        historyList.innerHTML += `
+
+            <li>
+
+                <strong>${item.type}</strong>
+
+                <p>${item.request}</p>
+
+                <small>${item.date}</small>
+
+                <button
+                    class="delete-history"
+                    data-index="${index}"
+                >
+
+                    Supprimer
+
+                </button>
+
+            </li>
+
+        `;
+
+    });
+
+}
