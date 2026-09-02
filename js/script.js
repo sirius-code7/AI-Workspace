@@ -2,6 +2,12 @@
 
 const content = document.querySelector("#content");
 
+const dashboardButton = document.querySelector("#dashboard-btn");
+
+    dashboardButton.addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+
 const summaryButton = document.querySelector("#summary-btn");
 
 const translationButton = document.querySelector("#translation-btn");
@@ -11,7 +17,9 @@ const chatButton = document.querySelector("#chat-btn");
 const predictMenuButton = document.querySelector("#predict-btn");
 
 
-// Résumé de texte
+/* ==========================
+    MODULE DE RÉSUMÉ DE TEXTE
+========================== */
 
 function displaySummaryModule() {
 
@@ -70,7 +78,9 @@ summaryButton.addEventListener("click", displaySummaryModule);
 
 
 
-// Traduction de texte
+/* ==========================
+    MODULE DE TRADUCTION
+========================== */
 function displayTranslationModule() {
 
     content.innerHTML = `
@@ -123,7 +133,9 @@ function displayTranslationModule() {
 
 }
 
-// Simulation de traduction
+/* ==========================
+    SIMULATION DE TRADUCTION
+========================== */
 function simulateTranslation() {
 
     const input =
@@ -153,7 +165,9 @@ translationButton.addEventListener("click", displayTranslationModule);
 
 
 
-// Chat IA
+/* ==========================
+    MODULE DE CHAT
+========================== */
 function displayChatModule() {
 
     content.innerHTML = `
@@ -200,7 +214,9 @@ function displayChatModule() {
 
 }
 
-// Simulation de chat
+/* ==========================
+    SIMULATION DE CHAT
+========================== */
 function simulateChat() {
 
     const input =
@@ -227,7 +243,9 @@ chatButton.addEventListener("click", displayChatModule);
 
 
 
-// Prédiction
+/* ==========================
+    MODULE DE PRÉDICTION
+========================== */
 function displayPredictionModule() {
 
     content.innerHTML = `
@@ -277,7 +295,9 @@ function displayPredictionModule() {
     );
 }
 
-// Simulation de prédiction
+/* ==========================
+    SIMULATION DE PRÉDICTION
+========================== */
 function simulatePrediction() {
 
     const age =
@@ -311,3 +331,13 @@ function simulatePrediction() {
 }
 
 predictMenuButton.addEventListener("click", displayPredictionModule);
+
+
+
+/* ==========================
+   HISTORIQUE
+========================== */
+
+let history = JSON.parse(
+    localStorage.getItem("history")
+) || [];
