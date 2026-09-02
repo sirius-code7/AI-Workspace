@@ -173,6 +173,81 @@ body {
     border-radius: 12px;
 
     border: 1px solid #e5e7eb;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stat-card h3 {
+
+    font-size: .95rem;
+
+    font-weight: 600;
+
+    color: #374151;
+
+    margin-bottom: 1rem;
+
+}
+.stat-number {
+
+    font-size: 2.2rem;
+
+    font-weight: bold;
+
+    color: #111827;
+
+}
+
+.stat-info1 {
+
+    margin-top: .7rem;
+
+    font-size: .85rem;
+
+    color: #34A0FE;
+
+}
+
+.stat-info2 {
+
+    margin-top: .7rem;
+
+    font-size: .85rem;
+
+    color: #21BA72;
+
+}
+
+.stat-info3 {
+
+    margin-top: .7rem;
+
+    font-size: .85rem;
+
+    color: #4D2C87;
+
+}
+
+.stat-info4 {
+
+    margin-top: .7rem;
+
+    font-size: .85rem;
+
+    color: #F49D27;
+
+}
+
+.stat-info5 {
+
+    margin-top: .7rem;
+
+    font-size: .85rem;
+
+    color: #4BB3E8;
+
 }
 
 /* ==========================
@@ -197,6 +272,14 @@ body {
     border: 1px solid #e5e7eb;
 }
 
+.chart-card img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+
+}
 /* ==========================
    TABLEAUX
 ========================== */
@@ -207,16 +290,82 @@ body {
     gap: 1rem;
 }
 
+.dashboard-table th{
+
+    text-align:left;
+
+    padding:.8rem;
+
+    color:#6b7280;
+
+    border-bottom:1px solid #e5e7eb;
+
+    font-size:.9rem;
+
+}
+
+.dashboard-table td{
+
+    padding:.8rem;
+
+    border-collapse: collapse;
+
+    border-bottom:1px solid #f3f4f6;
+
+    font-size:.9rem;
+
+}
+
+.dashboard-table tbody tr:hover{
+
+    background:#f9fafb;
+
+}
+
+
+/* ==========================
+    TABLE CARD
+========================== */
+
 .table-card {
-    height: 260px;
+    height: auto;
 
     background-color: white;
 
     border-radius: 12px;
 
     border: 1px solid #e5e7eb;
+
+    display: flex;
+
+    flex-direction: column;
+
 }
 
+.table-card h3{
+
+    margin-bottom:1rem;
+
+    font-size:1.1rem;
+
+    color:#111827;
+
+}
+
+.table-footer{
+    margin-top:1rem;
+    text-align:right;
+}
+
+.table-footer a{
+    color:#2872DF;
+    font-size:.9rem;
+    font-weight:500;
+}
+
+.table-footer a:hover{
+    text-decoration:underline;
+}
 
 
 /* ==========================
@@ -247,4 +396,42 @@ button {
 
 button:hover {
     opacity: .9;
+}
+
+
+
+/* ==========================
+    MEDIA QUERIES - RESPONSIVE DESIGN
+========================== */
+
+@media (max-width:1200px){
+
+    .dashboard-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .dashboard-charts{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard-tables{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .workspace{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    .dashboard-stats{
+        grid-template-columns:1fr;
+    }
+
 }
