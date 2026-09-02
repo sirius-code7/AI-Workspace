@@ -351,7 +351,7 @@ let history = JSON.parse(
 ) || [];
 
 /* ==========================
-   FUNCTION HISTORIQUE
+   HISTORIQUE SYS
 ========================== */
 
 function saveHistory(type, request) {
@@ -374,4 +374,37 @@ function saveHistory(type, request) {
 
     );
 
+}
+
+/* ==========================
+    MODULE HISTORIQUE
+========================== */
+
+function displayHistoryModule() {
+
+    content.innerHTML = `
+
+        <section class="history-module">
+
+            <h2>Historique</h2>
+
+            <input
+                type="text"
+                id="history-search"
+                placeholder="Rechercher..."
+            >
+
+            <button id="clear-history">
+
+                Vider l'historique
+
+            </button>
+
+            <ul id="history-list"></ul>
+
+        </section>
+
+    `;
+
+    renderHistory();
 }
