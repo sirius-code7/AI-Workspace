@@ -28,29 +28,36 @@ function displaySummaryModule() {
     content.innerHTML = `
         <section class="summary-module">
 
-            <!-- module résumé de texte -->
-            <h2>Résumé de texte</h2>
+            <div class="summary-header">
+                <h2>Résumé de texte</h2>
+                <p>
+                    Collez un document afin d'obtenir automatiquement un résumé.
+                </p>
+            </div>
 
-            <!-- zone de saisie -->
-            <textarea
-                id="summary-input"
-                placeholder="Saisissez votre texte..."
-            ></textarea>
+            <div class="summary-card">
 
-            <!-- btn résumer -->
-            <button id="generate-summary">
-                Résumer
-            </button>
+                <label for="summary-input">
+                    Texte à résumer
+                </label>
 
-            <!-- zone d'affichage du résumé simulé -->
-            <div id="summary-result">
+                <textarea
+                    id="summary-input"
+                    placeholder="Saisissez ou collez votre texte ici..."
+                ></textarea>
 
-                Le résumé apparaîtra ici.
+                <button id="generate-summary">
+                    Résumer
+                </button>
+
+                <div id="summary-result">
+                    Le résumé apparaîtra ici.
+                </div>
 
             </div>
 
         </section>
-    `;
+`;
 
     const generateButton = document.querySelector("#generate-summary");
 
@@ -90,42 +97,62 @@ function displayTranslationModule() {
     content.innerHTML = `
         <section class="translation-module">
 
-            <!-- module de traduction -->
-            <h2>Traduction</h2>
+            <div class="translation-header">
+                <h2>Traduction</h2>
+                <p>
+                    Traduisez rapidement un texte vers une autre langue.
+                </p>
+            </div>
 
-            <!-- zone de saisie -->
-            <textarea
-                id="translation-input"
-                placeholder="Saisissez votre texte..."
-            ></textarea>
+            <div class="translation-card">
 
-            <!-- sélection de la langue -->
-            <select id="translation-language">
+                <label for="translation-input">
+                    Texte à traduire
+                </label>
 
-                <option value="anglais">Anglais</option>
+                <textarea
+                    id="translation-input"
+                    placeholder="Saisissez votre texte..."
+                ></textarea>
 
-                <option value="francais">Français</option>
+                <label for="translation-language">
+                    Langue cible
+                </label>
 
-                <option value="espagnol">Espagnol</option>
+                <select id="translation-language">
+                    <option value="anglais">
+                        Anglais
+                    </option>
 
-            </select>
+                    <option value="francais">
+                        Français
+                    </option>
 
-            <!-- btn traduire -->
-            <button id="translate-button">
+                    <option value="espagnol">
+                        Espagnol
+                    </option>
+                </select>
 
-                Traduire
+                <button id="translate-button">
+                    Traduire
+                </button>
 
-            </button>
+                <div class="translation-result-card">
 
-            <!-- zone d'affichage de la traduction simulée -->
-            <div id="translation-result">
+                    <label>
+                        Résultat
+                    </label>
 
-                La traduction apparaîtra ici.
+                    <div id="translation-result">
+                        La traduction apparaîtra ici.
+                    </div>
+
+                </div>
 
             </div>
 
         </section>
-    `;
+`;
 
     const translateButton =
     document.querySelector("#translate-button");
@@ -179,36 +206,45 @@ function displayChatModule() {
     content.innerHTML = `
         <section class="chat-module">
 
-            <!-- module de chat -->
+            <div class="chat-header">
+                <h2>Chat IA</h2>
+                <p>
+                    Discutez avec votre assistant intelligent.
+                </p>
+            </div>
 
-            <h2>Chat IA</h2>
+            <div class="chat-card">
 
-            <!-- zone de saisie -->
+                <label for="chat-input">
+                    Votre question
+                </label>
 
-            <input
-                type="text"
-                id="chat-input"
-                placeholder="Posez votre question..."
-            >
+                <input
+                    type="text"
+                    id="chat-input"
+                    placeholder="Posez votre question..."
+                >
 
-            <!-- btn envoyer -->
+                <button id="chat-send">
+                    Envoyer
+                </button>
 
-            <button id="chat-send">
+                <div class="chat-response-card">
 
-                Envoyer
+                    <label>
+                        Réponse
+                    </label>
 
-            </button>
+                    <div id="chat-response">
+                        La réponse apparaîtra ici.
+                    </div>
 
-            <!-- zone de réponse -->
-
-            <div id="chat-response">
-
-                La réponse apparaîtra ici.
+                </div>
 
             </div>
 
         </section>
-    `;
+`;
 
     const chatSend =
     document.querySelector("#chat-send");
@@ -259,40 +295,65 @@ function displayPredictionModule() {
     content.innerHTML = `
         <section class="prediction-module">
 
-            <h2>Prédiction</h2>
+            <div class="prediction-header">
+                <h2>Prédiction</h2>
+                <p>
+                    Simulez une prédiction grâce à un modèle IA.
+                </p>
+            </div>
 
-            <input
-                type="number"
-                id="prediction-age"
-                placeholder="Âge"
-            >
+            <div class="prediction-card">
 
-            <input
-                type="number"
-                id="prediction-income"
-                placeholder="Revenu"
-            >
+                <label for="prediction-age">
+                    Âge
+                </label>
 
-            <input
-                type="text"
-                id="prediction-city"
-                placeholder="Ville"
-            >
+                <input
+                    type="number"
+                    id="prediction-age"
+                    placeholder="Âge"
+                >
 
-            <button id="predict-button">
+                <label for="prediction-income">
+                    Revenu
+                </label>
 
-                Prédire
+                <input
+                    type="number"
+                    id="prediction-income"
+                    placeholder="Revenu"
+                >
 
-            </button>
+                <label for="prediction-city">
+                    Ville
+                </label>
 
-            <div id="prediction-result">
+                <input
+                    type="text"
+                    id="prediction-city"
+                    placeholder="Ville"
+                >
 
-                La prédiction apparaîtra ici.
+                <button id="predict-button">
+                    Prédire
+                </button>
+
+                <div class="prediction-result-card">
+
+                    <label>
+                        Résultat
+                    </label>
+
+                    <div id="prediction-result">
+                        La prédiction apparaîtra ici.
+                    </div>
+
+                </div>
 
             </div>
 
         </section>
-    `;
+`;
 
     const predictButton =
     document.querySelector("#predict-button");
@@ -385,28 +446,37 @@ function saveHistory(type, request) {
 function displayHistoryModule() {
 
     content.innerHTML = `
-
         <section class="history-module">
 
-            <h2>Historique</h2>
+            <div class="history-header">
+                <h2>Historique</h2>
+                <p>
+                    Retrouvez toutes vos interactions.
+                </p>
+            </div>
 
-            <input
-                type="text"
-                id="history-search"
-                placeholder="Rechercher..."
-            >
+            <div class="history-card">
 
-            <button id="clear-history">
+                <label for="history-search">
+                    Rechercher
+                </label>
 
-                Vider l'historique
+                <input
+                    type="text"
+                    id="history-search"
+                    placeholder="Rechercher..."
+                >
 
-            </button>
+                <button id="clear-history">
+                    Vider l'historique
+                </button>
 
-            <ul id="history-list"></ul>
+                <ul id="history-list"></ul>
+
+            </div>
 
         </section>
-
-    `;
+`;
 
     renderHistory();
 
